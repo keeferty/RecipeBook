@@ -18,6 +18,7 @@
 		929133541CCBF4AE00B2351E /* RecipeBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133531CCBF4AE00B2351E /* RecipeBookUITests.swift */; };
 		929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 		929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */; };
+		929133691CCC106F00B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -448,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929133691CCC106F00B2351E /* RBAPICallParameters.swift in Sources */,
 				929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
