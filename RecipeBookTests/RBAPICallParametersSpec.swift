@@ -24,21 +24,14 @@ class RBAPICallParametersSpec: QuickSpec {
             
             describe("Size field tests") {
                 it("nil size should not be in the params") {
-                    let params = builder.size(nil).build()
-                    expect(params.params.keys.contains("size")).toNot(beTrue())
+                    let params = builder.size(.ThumbnailMedium).build()
+                    expect(params.params.keys.contains("size")).to(beTrue())
                 }
                 it("set size should be in the params") {
                     let params = builder.size(.ThumbnailMedium).build()
-                    expect(params.params.keys.contains("size")).to(beTrue())
                     let value = params.params["size"] as? String
                     expect(value).toNot(beNil())
                     expect(value == "thumbnail-medium").to(beTrue())
-                }
-                it("reset size should change in the params") {
-                    let params = builder.size(nil).build()
-                    expect(params.params.keys.contains("size")).to(beFalse())
-                    let value = params.params["size"] as? String
-                    expect(value).to(beNil())
                 }
             }
             

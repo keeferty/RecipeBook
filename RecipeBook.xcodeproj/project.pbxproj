@@ -18,16 +18,21 @@
 		929133541CCBF4AE00B2351E /* RecipeBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133531CCBF4AE00B2351E /* RecipeBookUITests.swift */; };
 		929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 		929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */; };
-		929133691CCC106F00B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 		9291336B1CCC9EE500B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
 		9291336D1CCCA1AB00B2351E /* RBAPICallSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336C1CCCA1AB00B2351E /* RBAPICallSpec.swift */; };
-		9291336E1CCCA1B100B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
 		929133701CCD24BD00B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
-		929133711CCD24BD00B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
 		929133751CCD3F5700B2351E /* RBRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133741CCD3F5700B2351E /* RBRecipe.swift */; };
 		929133771CCD439500B2351E /* RBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133761CCD439500B2351E /* RBImage.swift */; };
 		929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133781CCD4A6700B2351E /* RBIngredient.swift */; };
 		9291337B1CCD521A00B2351E /* RBIngredientElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291337A1CCD521A00B2351E /* RBIngredientElement.swift */; };
+		929133821CCD54E900B2351E /* RBRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133741CCD3F5700B2351E /* RBRecipe.swift */; };
+		929133831CCD54E900B2351E /* RBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133761CCD439500B2351E /* RBImage.swift */; };
+		929133841CCD54E900B2351E /* RBIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133781CCD4A6700B2351E /* RBIngredient.swift */; };
+		929133851CCD54E900B2351E /* RBIngredientElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291337A1CCD521A00B2351E /* RBIngredientElement.swift */; };
+		929133861CCD54E900B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
+		929133871CCD54E900B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
+		929133881CCD54E900B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
+		9291338A1CCD54E900B2351E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133351CCBF4AE00B2351E /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -486,11 +491,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9291336E1CCCA1B100B2351E /* RBAPICall.swift in Sources */,
-				929133711CCD24BD00B2351E /* RBAPIService.swift in Sources */,
 				9291336D1CCCA1AB00B2351E /* RBAPICallSpec.swift in Sources */,
-				929133691CCC106F00B2351E /* RBAPICallParameters.swift in Sources */,
+				929133821CCD54E900B2351E /* RBRecipe.swift in Sources */,
+				929133881CCD54E900B2351E /* RBAPIService.swift in Sources */,
+				929133861CCD54E900B2351E /* RBAPICallParameters.swift in Sources */,
+				9291338A1CCD54E900B2351E /* ViewController.swift in Sources */,
 				929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */,
+				929133871CCD54E900B2351E /* RBAPICall.swift in Sources */,
+				929133851CCD54E900B2351E /* RBIngredientElement.swift in Sources */,
+				929133841CCD54E900B2351E /* RBIngredient.swift in Sources */,
+				929133831CCD54E900B2351E /* RBImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
