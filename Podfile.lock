@@ -2,21 +2,36 @@ PODS:
   - Alamofire (3.3.1)
   - AlamofireNetworkActivityIndicator (1.0.1):
     - Alamofire (~> 3.3)
+  - AlamofireObjectMapper (3.0.0):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
   - Nimble (3.2.0)
+  - ObjectMapper (1.2.0)
   - Quick (0.9.0)
+  - RxCocoa (2.4):
+    - RxSwift (~> 2.4)
+  - RxSwift (2.4)
 
 DEPENDENCIES:
   - Alamofire (= 3.3.1)
   - AlamofireNetworkActivityIndicator (= 1.0.1)
+  - AlamofireObjectMapper (= 3.0)
   - Nimble (= 3.2.0)
+  - ObjectMapper (= 1.2)
   - Quick (= 0.9.0)
+  - RxCocoa (= 2.4)
+  - RxSwift (= 2.4)
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
+  AlamofireObjectMapper: 2d16585d06177be0116d76de73497e77437798af
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
   Quick: 332eb1da73125a2106dd637424c803f2ae97e4a9
+  RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
+  RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
 
-PODFILE CHECKSUM: 617d522efafe1a26b7e2763ab27abd7c235b115f
+PODFILE CHECKSUM: f53c4d89043f2edf1a2e39d997645c01520790c2
 
 COCOAPODS: 1.0.0.beta.8

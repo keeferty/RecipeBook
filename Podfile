@@ -2,8 +2,12 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'RecipeBook' do
-    pod 'AlamofireNetworkActivityIndicator', '1.0.1'
+    pod 'RxSwift', '2.4'
+    pod 'RxCocoa', '2.4'
     pod 'Alamofire', '3.3.1'
+    pod 'AlamofireNetworkActivityIndicator', '1.0.1'
+    pod 'AlamofireObjectMapper', '3.0'
+    pod 'ObjectMapper', '1.2'
 end
 
 def testing_pods

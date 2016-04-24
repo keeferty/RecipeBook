@@ -33,7 +33,7 @@ final class RBAPICallParameters {
     
     class Builder {
         private var parameters : RBAPICallParameters!
-        private var size : ThumbnailSize?
+        private var size : ThumbnailSize = .ThumbnailMedium
         private var ratio : Int?
         private var limit : Int?
         private var from : Int?
@@ -43,10 +43,7 @@ final class RBAPICallParameters {
             parameters = RBAPICallParameters()
         }
         
-        func size(s: ThumbnailSize?) -> Builder {
-            if s == nil {
-                parameters.remove(.Size)
-            }
+        func size(s: ThumbnailSize) -> Builder {
             size = s
             return self
         }
@@ -77,9 +74,7 @@ final class RBAPICallParameters {
         
         func build() -> RBAPICallParameters {
             
-            if let s = size {
-                parameters.add(.Size, value: s.rawValue)
-            }
+            parameters.add(.Size, value: size.rawValue)
             if let r = ratio {
                 parameters.add(.Ratio, value: r)
             }
