@@ -19,6 +19,9 @@
 		929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 		929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */; };
 		929133691CCC106F00B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
+		9291336B1CCC9EE500B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
+		9291336D1CCCA1AB00B2351E /* RBAPICallSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336C1CCCA1AB00B2351E /* RBAPICallSpec.swift */; };
+		9291336E1CCCA1B100B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		929133551CCBF4AE00B2351E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929133651CCC0AF600B2351E /* RBAPICallParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICallParameters.swift; sourceTree = "<group>"; };
 		929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICallParametersSpec.swift; sourceTree = "<group>"; };
+		9291336A1CCC9EE500B2351E /* RBAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICall.swift; sourceTree = "<group>"; };
+		9291336C1CCCA1AB00B2351E /* RBAPICallSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICallSpec.swift; sourceTree = "<group>"; };
 		BD39BD1FC68A81551FED0206 /* Pods-RecipeBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeBookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeBookTests/Pods-RecipeBookTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6FBEE65DA462A94A1D4B9C4 /* Pods_RecipeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCB358A6D099A4B2D401475 /* Pods_RecipeBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +161,7 @@
 			children = (
 				9291334A1CCBF4AE00B2351E /* Info.plist */,
 				929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */,
+				9291336C1CCCA1AB00B2351E /* RBAPICallSpec.swift */,
 			);
 			path = RecipeBookTests;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				929133651CCC0AF600B2351E /* RBAPICallParameters.swift */,
+				9291336A1CCC9EE500B2351E /* RBAPICall.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -439,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9291336B1CCC9EE500B2351E /* RBAPICall.swift in Sources */,
 				929133361CCBF4AE00B2351E /* ViewController.swift in Sources */,
 				929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */,
 				929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */,
@@ -449,6 +457,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9291336E1CCCA1B100B2351E /* RBAPICall.swift in Sources */,
+				9291336D1CCCA1AB00B2351E /* RBAPICallSpec.swift in Sources */,
 				929133691CCC106F00B2351E /* RBAPICallParameters.swift in Sources */,
 				929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */,
 			);
