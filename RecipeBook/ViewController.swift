@@ -14,10 +14,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        RBAPIService.rx_requestAPIFor(.RecipeList, size: .ThumbnailMedium, ratio: Optional(1), limit: Optional(50), from: Optional(0))
-            .subscribeCompleted { 
-                print("dupa")
-        }        // Do any additional setup after loading the view, typically from a nib.
+        RBAPIService<RBRecipe>.rx_requestAPIFor(.RecipeList, size: .ThumbnailMedium, ratio: Optional(1), limit: Optional(50), from: Optional(0))
+            .subscribeNext({ (result) in
+                print(result)
+            })
     }
 
     override func didReceiveMemoryWarning() {

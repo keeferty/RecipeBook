@@ -24,6 +24,10 @@
 		9291336E1CCCA1B100B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
 		929133701CCD24BD00B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
 		929133711CCD24BD00B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
+		929133751CCD3F5700B2351E /* RBRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133741CCD3F5700B2351E /* RBRecipe.swift */; };
+		929133771CCD439500B2351E /* RBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133761CCD439500B2351E /* RBImage.swift */; };
+		929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133781CCD4A6700B2351E /* RBIngredient.swift */; };
+		9291337B1CCD521A00B2351E /* RBIngredientElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291337A1CCD521A00B2351E /* RBIngredientElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		9291336A1CCC9EE500B2351E /* RBAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICall.swift; sourceTree = "<group>"; };
 		9291336C1CCCA1AB00B2351E /* RBAPICallSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICallSpec.swift; sourceTree = "<group>"; };
 		9291336F1CCD24BD00B2351E /* RBAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPIService.swift; sourceTree = "<group>"; };
+		929133741CCD3F5700B2351E /* RBRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBRecipe.swift; sourceTree = "<group>"; };
+		929133761CCD439500B2351E /* RBImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBImage.swift; sourceTree = "<group>"; };
+		929133781CCD4A6700B2351E /* RBIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBIngredient.swift; sourceTree = "<group>"; };
+		9291337A1CCD521A00B2351E /* RBIngredientElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBIngredientElement.swift; sourceTree = "<group>"; };
 		BD39BD1FC68A81551FED0206 /* Pods-RecipeBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeBookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeBookTests/Pods-RecipeBookTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6FBEE65DA462A94A1D4B9C4 /* Pods_RecipeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCB358A6D099A4B2D401475 /* Pods_RecipeBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +156,7 @@
 		929133321CCBF4AE00B2351E /* RecipeBook */ = {
 			isa = PBXGroup;
 			children = (
+				929133731CCD3F3E00B2351E /* Model */,
 				929133641CCC0AC200B2351E /* Service */,
 				929133331CCBF4AE00B2351E /* AppDelegate.swift */,
 				929133351CCBF4AE00B2351E /* ViewController.swift */,
@@ -186,6 +195,17 @@
 				9291336F1CCD24BD00B2351E /* RBAPIService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		929133731CCD3F3E00B2351E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929133741CCD3F5700B2351E /* RBRecipe.swift */,
+				929133761CCD439500B2351E /* RBImage.swift */,
+				929133781CCD4A6700B2351E /* RBIngredient.swift */,
+				9291337A1CCD521A00B2351E /* RBIngredientElement.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,10 +471,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9291336B1CCC9EE500B2351E /* RBAPICall.swift in Sources */,
+				929133751CCD3F5700B2351E /* RBRecipe.swift in Sources */,
+				929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */,
 				929133701CCD24BD00B2351E /* RBAPIService.swift in Sources */,
 				929133361CCBF4AE00B2351E /* ViewController.swift in Sources */,
 				929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */,
+				9291337B1CCD521A00B2351E /* RBIngredientElement.swift in Sources */,
 				929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */,
+				929133771CCD439500B2351E /* RBImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 import Alamofire
+import AlamofireObjectMapper
+import ObjectMapper
 import RxSwift
 import RxCocoa
 
@@ -14,11 +16,11 @@ enum AvailableCalls {
     case RecipeList
 }
 
-final class RBAPIService {
+final class RBAPIService<T: Mappable> {
     
     private init(){}
     
-    static func rx_requestAPIFor(what: AvailableCalls, size: ThumbnailSize, ratio: Int?, limit: Int?, from: Int?) -> Observable<AnyObject> {
+    static func rx_requestAPIFor(what: AvailableCalls, size: ThumbnailSize, ratio: Int?, limit: Int?, from: Int?) -> Observable<[T]> {
         
         let parameters = RBAPICallParameters.Builder()
                             .size(size)
@@ -31,7 +33,7 @@ final class RBAPIService {
     }
     
     
-    static func rx_requestAPIFor(what: AvailableCalls, parameters: RBAPICallParameters) -> Observable<AnyObject> {
+    static func rx_requestAPIFor(what: AvailableCalls, parameters: RBAPICallParameters) -> Observable<[T]> {
         
         return Observable.create { subscriber -> Disposable in
             
@@ -43,14 +45,16 @@ final class RBAPIService {
                         subscriber.onError(NSError(domain: "There is no results", code: 1000, userInfo: nil))
                     }
                 })
-            .responseJSON(completionHandler: { (response : Response<AnyObject, NSError>) -> Void in
-                switch response.result {
-                case .Success(let value):
-                    subscriber.onCompleted()
-                case .Failure(let error):
-                    subscriber.onError(error)
-                }
-            })            
+                .responseArray { (response: Response<[T], NSError>) -> Void in
+                    
+                    switch response.result {
+                    case .Success(let value):
+                        subscriber.onNext(value)
+                        subscriber.onCompleted()
+                    case .Failure(let error):
+                        subscriber.onError(error)
+                    }
+            }
             return AnonymousDisposable {
                 request.cancel()
             }
