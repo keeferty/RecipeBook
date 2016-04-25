@@ -25,11 +25,11 @@ class RBDetailViewModel {
         adapter.updateDatasource(ingredients)
     }
     
-    func dataToDisplay() -> (name: String, description: String,url: NSURL?) {
+    func dataToDisplay() -> (description: String,url: NSURL?) {
         if recipe.images.count > 0, let image = recipe.images.first {
-            return (recipe.title, recipe.desc, NSURL(string: image.url)!)
+            return (recipe.desc, NSURL(string: image.url)!)
         }
-        return (recipe.title, recipe.desc, nil)
+        return (recipe.desc, nil)
     }
     
 }

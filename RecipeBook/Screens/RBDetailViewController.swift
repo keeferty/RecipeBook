@@ -24,7 +24,9 @@ class RBDetailViewController: RBBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.refreshView(self.viewModel!.dataToDisplay())
+        if viewModel != nil {
+            self.refreshView(self.viewModel!.dataToDisplay())
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,10 +45,9 @@ class RBDetailViewController: RBBaseViewController {
 }
 
 extension RBDetailViewController {
-    func refreshView(data:(name: String, description: String, url: NSURL?)) {
+    func refreshView(data:(description: String, url: NSURL?)) {
         tableView.dataSource = viewModel?.adapter
         tableView.reloadData()
-        tableHeader.recipeTitle.text = data.name
         tableHeader.recipeDescription.text = data.description
         if let url = data.url {
             tableHeader.recipeImage.af_setImageWithURL(url,

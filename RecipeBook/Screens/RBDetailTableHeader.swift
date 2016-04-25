@@ -10,7 +10,6 @@ import UIKit
 
 class RBDetailTableHeader: UIView {
     @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeDescription: UILabel!
 
     override func layoutSubviews() {

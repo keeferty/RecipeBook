@@ -65,6 +65,8 @@ extension RBMasterViewController {
             .subscribe { [unowned self] event in
                 if let _ = event.element {
                     self.tableView.reloadData()
+                    self.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .None)
+                    self.performSegueWithIdentifier("showDetail", sender: self)
                 }
             }
             .addDisposableTo(disposeBag)
@@ -76,8 +78,8 @@ extension RBMasterViewController {
         tableView
             .rx_itemSelected
             .subscribeOn(MainScheduler.instance)
-            .subscribeNext { [weak self](indexPath) in
-                self?.performSegueWithIdentifier("showDetail", sender: self)
+            .subscribeNext { [unowned self](indexPath) in
+                self.performSegueWithIdentifier("showDetail", sender: self)
             }
             .addDisposableTo(disposeBag)
     }
