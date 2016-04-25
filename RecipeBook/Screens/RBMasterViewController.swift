@@ -72,6 +72,8 @@ extension RBMasterViewController {
     }
     
     func setupTableView()  {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 160.0
         tableView
             .rx_itemSelected
             .subscribeOn(MainScheduler.instance)
