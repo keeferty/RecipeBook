@@ -14,14 +14,19 @@ class RBMasterViewController: RBBaseViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    var viewModel: RBMasterViewModel!
-    var searchController : UISearchController! = nil
+    private var viewModel: RBMasterViewModel!
+    private var searchController : UISearchController! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViewModel()
         self.setupTableView()
         self.setupSearchController()        
+    }
+    
+    deinit {
+        viewModel = nil
+        searchController = nil
     }
     
     override func viewWillAppear(animated: Bool) {
