@@ -20,6 +20,5 @@ class RBDetailTableViewCell: UITableViewCell, RBConfigurableCell {
         }
         nameLabel.text = castedItem.name
         amountLabel.text = String(castedItem.amount)
-
     }
 }

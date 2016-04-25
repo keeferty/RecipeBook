@@ -62,9 +62,10 @@ extension RBMasterViewModel : UISearchResultsUpdating {
     func filterItems(query: String) {
         filteredItems = items?.filter({ (recipe: RBRecipe) -> Bool in
             let titleContains = recipe.title.localizedCaseInsensitiveContainsString(query)
-            let numberOfIngredients = recipe.ingredients.map { return $0.elements}.reduce([], combine: +).filter({ (ingredient :RBIngredientElement) -> Bool in
-                return ingredient.name.localizedCaseInsensitiveContainsString(query)
-            })
+            let numberOfIngredients = recipe.ingredients.map { return $0.elements}.reduce([], combine: +)
+                                                        .filter({ (ingredient :RBIngredientElement) -> Bool in
+                                                            return ingredient.name.localizedCaseInsensitiveContainsString(query)
+                                                        })
             let ingredientsContain = numberOfIngredients.count > 0
             return titleContains || ingredientsContain
         })

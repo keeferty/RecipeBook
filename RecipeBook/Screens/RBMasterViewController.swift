@@ -25,6 +25,15 @@ class RBMasterViewController: RBBaseViewController {
         self.setupSearchController()        
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath = tableView.indexPathForSelectedRow {
+            if self.traitCollection.userInterfaceIdiom == .Phone {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -75,8 +84,11 @@ extension RBMasterViewController {
             .subscribe { [unowned self] event in
                 if let _ = event.element {
                     self.tableView.reloadData()
-//                    self.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .None)
-//                    self.performSegueWithIdentifier("showDetail", sender: self)
+                    let parentCtrl = self.parentViewController?.parentViewController
+                    if self.traitCollection.userInterfaceIdiom == .Pad || (parentCtrl != nil && parentCtrl?.traitCollection.horizontalSizeClass == .Regular){
+                        self.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .None)
+                        self.performSegueWithIdentifier("showDetail", sender: self)
+                    }
                 }
             }
             .addDisposableTo(disposeBag)
