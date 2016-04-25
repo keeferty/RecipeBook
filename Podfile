@@ -12,8 +12,10 @@ def app_pods
     pod 'RxCocoa', '2.4'
     pod 'Alamofire', '3.3.1'
     pod 'AlamofireObjectMapper', '3.0'
-    pod 'ObjectMapper', '1.2'
+    pod 'ObjectMapper', '1.1.5'
     pod 'AlamofireImage', '2.4'
+    pod 'RealmSwift', '0.98.8'
+    pod 'RealmMapper', '1.0.3'
 end
 
 target 'RecipeBook' do
@@ -23,7 +25,8 @@ end
 
 target 'RecipeBookTests' do
     testing_pods
-    app_pods
+    pod 'Alamofire', '3.3.1'
+
 end
 
 target 'RecipeBookUITests' do

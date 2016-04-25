@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
 class RBMasterViewController: RBBaseViewController {
 
     @IBOutlet private weak var tableView: UITableView!

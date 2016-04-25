@@ -7,10 +7,12 @@
 //
 
 import ObjectMapper
+import RealmSwift
+import RealmMapper
 
-class RBIngredient: Mappable {
-    var name : String = ""
-    var elements : [RBIngredientElement] = []
+class RBIngredient: Object, Mappable {
+    dynamic var name : String = ""
+    let elements = List<RBIngredientElement>()
     
     
     required convenience init?(_ map: Map) {

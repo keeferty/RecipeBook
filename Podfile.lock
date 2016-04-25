@@ -8,8 +8,16 @@ PODS:
     - Alamofire (~> 3.2)
     - ObjectMapper (~> 1.0)
   - Nimble (3.2.0)
-  - ObjectMapper (1.2.0)
+  - ObjectMapper (1.1.5)
   - Quick (0.9.0)
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
+  - RealmMapper (1.0.3):
+    - ObjectMapper (~> 1.1.0)
+    - RealmSwift (~> 0.98.0)
+  - RealmSwift (0.98.8):
+    - Realm (= 0.98.8)
   - RxCocoa (2.4):
     - RxSwift (~> 2.4)
   - RxSwift (2.4)
@@ -20,8 +28,10 @@ DEPENDENCIES:
   - AlamofireNetworkActivityIndicator (= 1.0.1)
   - AlamofireObjectMapper (= 3.0)
   - Nimble (= 3.2.0)
-  - ObjectMapper (= 1.2)
+  - ObjectMapper (= 1.1.5)
   - Quick (= 0.9.0)
+  - RealmMapper (= 1.0.3)
+  - RealmSwift (= 0.98.8)
   - RxCocoa (= 2.4)
   - RxSwift (= 2.4)
 
@@ -31,11 +41,14 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
   AlamofireObjectMapper: 2d16585d06177be0116d76de73497e77437798af
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
-  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+  ObjectMapper: 528b1a6677a6acac7747edd508576983e76a9148
   Quick: 332eb1da73125a2106dd637424c803f2ae97e4a9
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
+  RealmMapper: 4b982ab1b766eca0a145cdbf02a628b3e6e955bc
+  RealmSwift: 064262d38113f23ff3508fb20a0a922e696bec01
   RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
   RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
 
-PODFILE CHECKSUM: 646d4d0937095479e5fed9ec54e3cf448ae0788f
+PODFILE CHECKSUM: d94f6884e1f6b8023ca3a2ee2666af4dd4b54777
 
 COCOAPODS: 1.0.0.beta.8

@@ -30,7 +30,7 @@ class RBMasterViewModel : NSObject{
 extension RBMasterViewModel {
     
     func setupFetchData()  {
-        RBAPIService<RBRecipe>.rx_requestAPIFor(.RecipeList, size: .ThumbnailMedium, ratio: 1, limit: 50, from: 0)
+        RBDataCenter.instance.getData()
             .subscribe({ [unowned self] event in
                 if let error = event.error {
                     self.rx_onError.onNext(error as NSError)
@@ -39,8 +39,8 @@ extension RBMasterViewModel {
                     self.adapter.updateDatasource(self.items!)
                     self.rx_dataSourceUpdate.onNext("")
                 }
-            })
-            .addDisposableTo(disposeBag)
+                })
+            .addDisposableTo(disposeBag)        
     }
     
     func detailViewModelAtIndex(index: Int) -> RBDetailViewModel {

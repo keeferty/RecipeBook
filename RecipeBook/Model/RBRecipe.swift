@@ -7,12 +7,14 @@
 //
 
 import ObjectMapper
+import RealmSwift
+import RealmMapper
 
-class RBRecipe: Mappable {
-     var title : String = ""
-     var desc : String = ""
-     var images : [RBImage] = []
-    var ingredients : [RBIngredient] = []
+class RBRecipe: Object, Mappable {
+    dynamic var title : String = ""
+    dynamic var desc : String = ""
+    let images = List<RBImage>()
+    let ingredients = List<RBIngredient>()
     
     
     required convenience init?(_ map: Map) {

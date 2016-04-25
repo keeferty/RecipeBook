@@ -22,7 +22,7 @@ class RBAPICallSpec: QuickSpec {
                 let call = RBAPICall.GetList(param: nil)
                 let request = Alamofire.request(call)
                 expect(request).toNot(beNil())
-                expect(request.request!.URLString == RBAPICall.BASE_URL).to(beTrue())
+                expect(request.request!.URLString == "http://www.godt.no/api/getRecipesListDetailed").to(beTrue())
             }
         }
     }

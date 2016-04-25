@@ -7,10 +7,12 @@
 //
 
 import ObjectMapper
+import RealmSwift
+import RealmMapper
 
-class RBImage: Mappable {
-     var id : String = ""
-     var url : String = ""
+class RBImage: Object, Mappable {
+     dynamic var id : String = ""
+     dynamic var url : String = ""
 
     required convenience init?(_ map: Map) {
         self.init()

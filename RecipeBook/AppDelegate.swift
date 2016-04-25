@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UISplitViewControllerDel
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
         

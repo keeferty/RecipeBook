@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		01E1B9BD01777D1AAC03009D /* Pods_RecipeBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FBEE65DA462A94A1D4B9C4 /* Pods_RecipeBook.framework */; };
 		246F1F1EEF3EA644817C8C49 /* Pods_RecipeBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852F54E14E398C280D15284A /* Pods_RecipeBookTests.framework */; };
-		319EFAB50676D44A8F6E544C /* Pods_RecipeBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB358A6D099A4B2D401475 /* Pods_RecipeBookUITests.framework */; };
 		9209B7381CCD714C005F8312 /* RBMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7371CCD714C005F8312 /* RBMasterTableViewCell.swift */; };
 		9209B73E1CCD7BB8005F8312 /* RBTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B73D1CCD7BB8005F8312 /* RBTableViewAdapter.swift */; };
 		9209B7411CCD7C18005F8312 /* RBConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */; };
 		9209B7431CCD9162005F8312 /* RBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7421CCD9162005F8312 /* RBBaseViewController.swift */; };
 		9209B74F1CCDC61A005F8312 /* RBDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */; };
+		924F50BA1CCE0FFC00398CBF /* RBDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F50B91CCE0FFC00398CBF /* RBDataCenter.swift */; };
+		924F50C01CCE283000398CBF /* RxRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F50BF1CCE283000398CBF /* RxRealm.swift */; };
 		929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133331CCBF4AE00B2351E /* AppDelegate.swift */; };
 		929133391CCBF4AE00B2351E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929133371CCBF4AE00B2351E /* Main.storyboard */; };
 		9291333B1CCBF4AE00B2351E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9291333A1CCBF4AE00B2351E /* Assets.xcassets */; };
 		9291333E1CCBF4AE00B2351E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9291333C1CCBF4AE00B2351E /* LaunchScreen.storyboard */; };
-		929133541CCBF4AE00B2351E /* RecipeBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133531CCBF4AE00B2351E /* RecipeBookUITests.swift */; };
 		929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 		929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */; };
 		9291336B1CCC9EE500B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
@@ -29,13 +29,8 @@
 		929133771CCD439500B2351E /* RBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133761CCD439500B2351E /* RBImage.swift */; };
 		929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133781CCD4A6700B2351E /* RBIngredient.swift */; };
 		9291337B1CCD521A00B2351E /* RBIngredientElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291337A1CCD521A00B2351E /* RBIngredientElement.swift */; };
-		929133821CCD54E900B2351E /* RBRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133741CCD3F5700B2351E /* RBRecipe.swift */; };
-		929133831CCD54E900B2351E /* RBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133761CCD439500B2351E /* RBImage.swift */; };
-		929133841CCD54E900B2351E /* RBIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133781CCD4A6700B2351E /* RBIngredient.swift */; };
-		929133851CCD54E900B2351E /* RBIngredientElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291337A1CCD521A00B2351E /* RBIngredientElement.swift */; };
 		929133861CCD54E900B2351E /* RBAPICallParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133651CCC0AF600B2351E /* RBAPICallParameters.swift */; };
 		929133871CCD54E900B2351E /* RBAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336A1CCC9EE500B2351E /* RBAPICall.swift */; };
-		929133881CCD54E900B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
 		929133AF1CCD5A0F00B2351E /* RBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133AE1CCD5A0F00B2351E /* RBDetailViewController.swift */; };
 		929133B11CCD5A9000B2351E /* RBMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133B01CCD5A9000B2351E /* RBMasterViewController.swift */; };
 		92A62D771CCDD6FB00E2026E /* RBDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A62D761CCDD6FB00E2026E /* RBDetailTableHeader.swift */; };
@@ -45,13 +40,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		929133451CCBF4AE00B2351E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 929133281CCBF4AE00B2351E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9291332F1CCBF4AE00B2351E;
-			remoteInfo = RecipeBook;
-		};
-		929133501CCBF4AE00B2351E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 929133281CCBF4AE00B2351E /* Project object */;
 			proxyType = 1;
@@ -70,6 +58,8 @@
 		9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBConfigurableCellProtocol.swift; sourceTree = "<group>"; };
 		9209B7421CCD9162005F8312 /* RBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBaseViewController.swift; sourceTree = "<group>"; };
 		9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDetailTableViewCell.swift; sourceTree = "<group>"; };
+		924F50B91CCE0FFC00398CBF /* RBDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDataCenter.swift; sourceTree = "<group>"; };
+		924F50BF1CCE283000398CBF /* RxRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRealm.swift; sourceTree = "<group>"; };
 		929133301CCBF4AE00B2351E /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929133331CCBF4AE00B2351E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929133381CCBF4AE00B2351E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,9 +68,6 @@
 		9291333F1CCBF4AE00B2351E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929133441CCBF4AE00B2351E /* RecipeBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9291334A1CCBF4AE00B2351E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9291334F1CCBF4AE00B2351E /* RecipeBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		929133531CCBF4AE00B2351E /* RecipeBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBookUITests.swift; sourceTree = "<group>"; };
-		929133551CCBF4AE00B2351E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929133651CCC0AF600B2351E /* RBAPICallParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICallParameters.swift; sourceTree = "<group>"; };
 		929133671CCC0B7C00B2351E /* RBAPICallParametersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICallParametersSpec.swift; sourceTree = "<group>"; };
 		9291336A1CCC9EE500B2351E /* RBAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAPICall.swift; sourceTree = "<group>"; };
@@ -119,14 +106,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9291334C1CCBF4AE00B2351E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				319EFAB50676D44A8F6E544C /* Pods_RecipeBookUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +135,7 @@
 		9209B73B1CCD7B87005F8312 /* ReusableElements */ = {
 			isa = PBXGroup;
 			children = (
+				924F50BE1CCE282600398CBF /* Extensions */,
 				9209B73F1CCD7BF8005F8312 /* Protocols */,
 				9209B73C1CCD7B8B005F8312 /* Classes */,
 			);
@@ -179,12 +159,27 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		924F50B81CCE0FE800398CBF /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				924F50B91CCE0FFC00398CBF /* RBDataCenter.swift */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		924F50BE1CCE282600398CBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				924F50BF1CCE283000398CBF /* RxRealm.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		929133271CCBF4AE00B2351E = {
 			isa = PBXGroup;
 			children = (
 				929133321CCBF4AE00B2351E /* RecipeBook */,
 				929133471CCBF4AE00B2351E /* RecipeBookTests */,
-				929133521CCBF4AE00B2351E /* RecipeBookUITests */,
 				929133311CCBF4AE00B2351E /* Products */,
 				82EFD2D5CAB80C7508DC6F2F /* Pods */,
 				77C7E0B5AC5CB5CC802BF9DA /* Frameworks */,
@@ -196,7 +191,6 @@
 			children = (
 				929133301CCBF4AE00B2351E /* RecipeBook.app */,
 				929133441CCBF4AE00B2351E /* RecipeBookTests.xctest */,
-				9291334F1CCBF4AE00B2351E /* RecipeBookUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +198,7 @@
 		929133321CCBF4AE00B2351E /* RecipeBook */ = {
 			isa = PBXGroup;
 			children = (
+				924F50B81CCE0FE800398CBF /* DataCenter */,
 				9209B73B1CCD7B87005F8312 /* ReusableElements */,
 				929133AB1CCD59CB00B2351E /* Screens */,
 				929133731CCD3F3E00B2351E /* Model */,
@@ -225,15 +220,6 @@
 				9291336C1CCCA1AB00B2351E /* RBAPICallSpec.swift */,
 			);
 			path = RecipeBookTests;
-			sourceTree = "<group>";
-		};
-		929133521CCBF4AE00B2351E /* RecipeBookUITests */ = {
-			isa = PBXGroup;
-			children = (
-				929133531CCBF4AE00B2351E /* RecipeBookUITests.swift */,
-				929133551CCBF4AE00B2351E /* Info.plist */,
-			);
-			path = RecipeBookUITests;
 			sourceTree = "<group>";
 		};
 		929133641CCC0AC200B2351E /* Service */ = {
@@ -331,26 +317,6 @@
 			productReference = 929133441CCBF4AE00B2351E /* RecipeBookTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9291334E1CCBF4AE00B2351E /* RecipeBookUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9291335E1CCBF4AE00B2351E /* Build configuration list for PBXNativeTarget "RecipeBookUITests" */;
-			buildPhases = (
-				01E152529D927DD43920A2B4 /* 📦 Check Pods Manifest.lock */,
-				9291334B1CCBF4AE00B2351E /* Sources */,
-				9291334C1CCBF4AE00B2351E /* Frameworks */,
-				9291334D1CCBF4AE00B2351E /* Resources */,
-				200B5E56F628B96C509621E4 /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				929133511CCBF4AE00B2351E /* PBXTargetDependency */,
-			);
-			name = RecipeBookUITests;
-			productName = RecipeBookUITests;
-			productReference = 9291334F1CCBF4AE00B2351E /* RecipeBookUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -365,10 +331,6 @@
 						CreatedOnToolsVersion = 7.3;
 					};
 					929133431CCBF4AE00B2351E = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 9291332F1CCBF4AE00B2351E;
-					};
-					9291334E1CCBF4AE00B2351E = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 9291332F1CCBF4AE00B2351E;
 					};
@@ -389,7 +351,6 @@
 			targets = (
 				9291332F1CCBF4AE00B2351E /* RecipeBook */,
 				929133431CCBF4AE00B2351E /* RecipeBookTests */,
-				9291334E1CCBF4AE00B2351E /* RecipeBookUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,46 +373,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9291334D1CCBF4AE00B2351E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01E152529D927DD43920A2B4 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		200B5E56F628B96C509621E4 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeBookUITests/Pods-RecipeBookUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		46559E59235818323ABBE363 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,6 +483,7 @@
 				929133AF1CCD5A0F00B2351E /* RBDetailViewController.swift in Sources */,
 				929133751CCD3F5700B2351E /* RBRecipe.swift in Sources */,
 				929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */,
+				924F50BA1CCE0FFC00398CBF /* RBDataCenter.swift in Sources */,
 				92A62D771CCDD6FB00E2026E /* RBDetailTableHeader.swift in Sources */,
 				929133701CCD24BD00B2351E /* RBAPIService.swift in Sources */,
 				929133B11CCD5A9000B2351E /* RBMasterViewController.swift in Sources */,
@@ -567,6 +492,7 @@
 				9291337B1CCD521A00B2351E /* RBIngredientElement.swift in Sources */,
 				929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */,
 				929133771CCD439500B2351E /* RBImage.swift in Sources */,
+				924F50C01CCE283000398CBF /* RxRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,22 +501,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9291336D1CCCA1AB00B2351E /* RBAPICallSpec.swift in Sources */,
-				929133821CCD54E900B2351E /* RBRecipe.swift in Sources */,
-				929133881CCD54E900B2351E /* RBAPIService.swift in Sources */,
 				929133861CCD54E900B2351E /* RBAPICallParameters.swift in Sources */,
 				929133681CCC0B7C00B2351E /* RBAPICallParametersSpec.swift in Sources */,
 				929133871CCD54E900B2351E /* RBAPICall.swift in Sources */,
-				929133851CCD54E900B2351E /* RBIngredientElement.swift in Sources */,
-				929133841CCD54E900B2351E /* RBIngredient.swift in Sources */,
-				929133831CCD54E900B2351E /* RBImage.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9291334B1CCBF4AE00B2351E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				929133541CCBF4AE00B2351E /* RecipeBookUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,11 +514,6 @@
 			isa = PBXTargetDependency;
 			target = 9291332F1CCBF4AE00B2351E /* RecipeBook */;
 			targetProxy = 929133451CCBF4AE00B2351E /* PBXContainerItemProxy */;
-		};
-		929133511CCBF4AE00B2351E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9291332F1CCBF4AE00B2351E /* RecipeBook */;
-			targetProxy = 929133501CCBF4AE00B2351E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -764,30 +672,6 @@
 			};
 			name = Release;
 		};
-		9291335F1CCBF4AE00B2351E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86463F75ABCE29B0CD56DFE8 /* Pods-RecipeBookUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = RecipeBookUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Schibsted.RecipeBookUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RecipeBook;
-			};
-			name = Debug;
-		};
-		929133601CCBF4AE00B2351E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74EBA9EE7446C8ACEA9C63C6 /* Pods-RecipeBookUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = RecipeBookUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Schibsted.RecipeBookUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RecipeBook;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -814,15 +698,6 @@
 			buildConfigurations = (
 				9291335C1CCBF4AE00B2351E /* Debug */,
 				9291335D1CCBF4AE00B2351E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9291335E1CCBF4AE00B2351E /* Build configuration list for PBXNativeTarget "RecipeBookUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9291335F1CCBF4AE00B2351E /* Debug */,
-				929133601CCBF4AE00B2351E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
