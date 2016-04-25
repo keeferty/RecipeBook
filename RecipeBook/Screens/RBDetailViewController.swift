@@ -7,30 +7,57 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import AlamofireImage
 
-class RBDetailViewController: UIViewController {
+class RBDetailViewController: RBBaseViewController {
     
-    var viewModel : RBDetailViewModel? = nil
+    @IBOutlet private weak var tableHeader: RBDetailTableHeader!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    var viewModel : RBDetailViewModel?{
+        didSet {
+            self.viewModel!.activate()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshView(self.viewModel!.dataToDisplay())
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        // Do any additional setup after loading the view.
+        // Dynamic sizing for the header view
+            let height = tableHeader.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+            var headerFrame = tableHeader.frame
+            
+            if height != headerFrame.size.height {
+                headerFrame.size.height = height
+                tableHeader.frame = headerFrame
+                tableView.tableHeaderView = tableHeader
+            }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension RBDetailViewController {
+    func refreshView(data:(name: String, description: String, url: NSURL?)) {
+        tableView.dataSource = viewModel?.adapter
+        tableView.reloadData()
+        tableHeader.recipeTitle.text = data.name
+        tableHeader.recipeDescription.text = data.description
+        if let url = data.url {
+            tableHeader.recipeImage.af_setImageWithURL(url,
+                                           placeholderImage: UIImage(named: "placeholder"),
+                                           filter: nil,
+                                           progress: nil,
+                                           progressQueue: dispatch_get_main_queue(),
+                                           imageTransition: .CrossDissolve(0.3),
+                                           runImageTransitionIfCached: true,
+                                           completion: nil)
+
+        }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

@@ -6,8 +6,20 @@
 //  Copyright © 2016 Schibsted. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class RBDetailTableViewCell: UITableViewCell {
+class RBDetailTableViewCell: UITableViewCell, RBConfigurableCell {
 
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var amountLabel: UILabel!
+    
+    func config(withItem item: Any) {
+        guard let castedItem = item as? RBIngredientElement
+            else {
+                return
+        }
+        nameLabel.text = castedItem.name
+        amountLabel.text = String(castedItem.amount)
+
+    }
 }

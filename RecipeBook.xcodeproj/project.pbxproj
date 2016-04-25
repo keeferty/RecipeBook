@@ -14,6 +14,7 @@
 		9209B73E1CCD7BB8005F8312 /* RBTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B73D1CCD7BB8005F8312 /* RBTableViewAdapter.swift */; };
 		9209B7411CCD7C18005F8312 /* RBConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */; };
 		9209B7431CCD9162005F8312 /* RBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7421CCD9162005F8312 /* RBBaseViewController.swift */; };
+		9209B74F1CCDC61A005F8312 /* RBDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */; };
 		929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133331CCBF4AE00B2351E /* AppDelegate.swift */; };
 		929133391CCBF4AE00B2351E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929133371CCBF4AE00B2351E /* Main.storyboard */; };
 		9291333B1CCBF4AE00B2351E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9291333A1CCBF4AE00B2351E /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		929133881CCD54E900B2351E /* RBAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291336F1CCD24BD00B2351E /* RBAPIService.swift */; };
 		929133AF1CCD5A0F00B2351E /* RBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133AE1CCD5A0F00B2351E /* RBDetailViewController.swift */; };
 		929133B11CCD5A9000B2351E /* RBMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133B01CCD5A9000B2351E /* RBMasterViewController.swift */; };
+		92A62D771CCDD6FB00E2026E /* RBDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A62D761CCDD6FB00E2026E /* RBDetailTableHeader.swift */; };
 		92D756911CCD5D8100CB8E2F /* RBDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D756901CCD5D8100CB8E2F /* RBDetailViewModel.swift */; };
 		92D756941CCD6C8900CB8E2F /* RBMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D756931CCD6C8900CB8E2F /* RBMasterViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,7 @@
 		9209B73D1CCD7BB8005F8312 /* RBTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBTableViewAdapter.swift; sourceTree = "<group>"; };
 		9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBConfigurableCellProtocol.swift; sourceTree = "<group>"; };
 		9209B7421CCD9162005F8312 /* RBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBaseViewController.swift; sourceTree = "<group>"; };
+		9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDetailTableViewCell.swift; sourceTree = "<group>"; };
 		929133301CCBF4AE00B2351E /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929133331CCBF4AE00B2351E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929133381CCBF4AE00B2351E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		9291337A1CCD521A00B2351E /* RBIngredientElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBIngredientElement.swift; sourceTree = "<group>"; };
 		929133AE1CCD5A0F00B2351E /* RBDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDetailViewController.swift; sourceTree = "<group>"; };
 		929133B01CCD5A9000B2351E /* RBMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBMasterViewController.swift; sourceTree = "<group>"; };
+		92A62D761CCDD6FB00E2026E /* RBDetailTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDetailTableHeader.swift; sourceTree = "<group>"; };
 		92D756901CCD5D8100CB8E2F /* RBDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDetailViewModel.swift; sourceTree = "<group>"; };
 		92D756931CCD6C8900CB8E2F /* RBMasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBMasterViewModel.swift; sourceTree = "<group>"; };
 		BD39BD1FC68A81551FED0206 /* Pods-RecipeBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeBookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeBookTests/Pods-RecipeBookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 			children = (
 				929133AE1CCD5A0F00B2351E /* RBDetailViewController.swift */,
 				92D756901CCD5D8100CB8E2F /* RBDetailViewModel.swift */,
+				9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */,
+				92A62D761CCDD6FB00E2026E /* RBDetailTableHeader.swift */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -553,8 +559,10 @@
 				929133AF1CCD5A0F00B2351E /* RBDetailViewController.swift in Sources */,
 				929133751CCD3F5700B2351E /* RBRecipe.swift in Sources */,
 				929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */,
+				92A62D771CCDD6FB00E2026E /* RBDetailTableHeader.swift in Sources */,
 				929133701CCD24BD00B2351E /* RBAPIService.swift in Sources */,
 				929133B11CCD5A9000B2351E /* RBMasterViewController.swift in Sources */,
+				9209B74F1CCDC61A005F8312 /* RBDetailTableViewCell.swift in Sources */,
 				929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */,
 				9291337B1CCD521A00B2351E /* RBIngredientElement.swift in Sources */,
 				929133661CCC0AF600B2351E /* RBAPICallParameters.swift in Sources */,

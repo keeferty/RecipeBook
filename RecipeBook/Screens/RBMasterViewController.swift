@@ -22,18 +22,17 @@ class RBMasterViewController: RBBaseViewController {
         self.setupViewModel()
         self.setupTableView()
     }
-
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showDetail" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let object = objects[indexPath.row] as! NSDate
-//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = object
-//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-//            }
-//        }
+        if segue.identifier == "showDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let vm = self.viewModel.detailViewModelAtIndex(indexPath.row)
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! RBDetailViewController
+                controller.viewModel = vm
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
 }
 
@@ -77,8 +76,8 @@ extension RBMasterViewController {
         tableView
             .rx_itemSelected
             .subscribeOn(MainScheduler.instance)
-            .subscribeNext { (indexPath) in
-                //itemSelected Stuff
+            .subscribeNext { [weak self](indexPath) in
+                self?.performSegueWithIdentifier("showDetail", sender: self)
             }
             .addDisposableTo(disposeBag)
     }

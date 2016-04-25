@@ -16,6 +16,8 @@ class RBMasterViewModel {
     
     var rx_onError : PublishSubject<NSError> = PublishSubject()
     var rx_dataSourceUpdate : PublishSubject<String> = PublishSubject()
+    var rx_updateDetail : PublishSubject<RBDetailViewModel> = PublishSubject()
+    
     var adapter = RBTableViewAdapter<RBRecipe,RBMasterTableViewCell>()
 
     
@@ -28,10 +30,18 @@ extension RBMasterViewModel {
     
     func setupFetchData()  {
         RBAPIService<RBRecipe>.rx_requestAPIFor(.RecipeList, size: .ThumbnailMedium, ratio: 1, limit: 50, from: 0)
-            .subscribeNext { (items: [RBRecipe]) in
-                self.adapter.updateDatasource(items)
-                self.rx_dataSourceUpdate.onNext("")
-            }
+            .subscribe({ event in
+                if let error = event.error {
+                    self.rx_onError.onNext(error as NSError)
+                } else if let items = event.element {
+                    self.adapter.updateDatasource(items)
+                    self.rx_dataSourceUpdate.onNext("")
+                }
+            })
             .addDisposableTo(disposeBag)
+    }
+    
+    func detailViewModelAtIndex(index: Int) -> RBDetailViewModel {
+        return RBDetailViewModel(recipe: adapter.items![index])
     }
 }
