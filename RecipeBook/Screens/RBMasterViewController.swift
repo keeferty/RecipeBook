@@ -16,11 +16,13 @@ class RBMasterViewController: RBBaseViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     var viewModel: RBMasterViewModel!
+    var searchController : UISearchController! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViewModel()
         self.setupTableView()
+        self.setupSearchController()        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -37,6 +39,14 @@ class RBMasterViewController: RBBaseViewController {
 }
 
 extension RBMasterViewController {
+    
+    func setupSearchController() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self.viewModel
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+    }
     
     func setupViewModel() {
         viewModel = RBMasterViewModel()
@@ -65,8 +75,8 @@ extension RBMasterViewController {
             .subscribe { [unowned self] event in
                 if let _ = event.element {
                     self.tableView.reloadData()
-                    self.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .None)
-                    self.performSegueWithIdentifier("showDetail", sender: self)
+//                    self.tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .None)
+//                    self.performSegueWithIdentifier("showDetail", sender: self)
                 }
             }
             .addDisposableTo(disposeBag)
