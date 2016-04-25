@@ -72,7 +72,7 @@ extension RBMasterViewController {
             .subscribeOn(MainScheduler.instance)
             .subscribeNext { [unowned self] (error) -> Void in
                 let alert = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-                let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+                let action = UIAlertAction(title: NSLocalizedString("OK", comment:""), style: UIAlertActionStyle.Default, handler: { action in
                     self.setupViewModel()
                     alert.dismissViewControllerAnimated(true, completion: nil)
                 })

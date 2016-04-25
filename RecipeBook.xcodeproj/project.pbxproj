@@ -16,6 +16,7 @@
 		9209B74F1CCDC61A005F8312 /* RBDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */; };
 		924F50BA1CCE0FFC00398CBF /* RBDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F50B91CCE0FFC00398CBF /* RBDataCenter.swift */; };
 		924F50C01CCE283000398CBF /* RxRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F50BF1CCE283000398CBF /* RxRealm.swift */; };
+		924F50C41CCE493600398CBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 924F50C31CCE493600398CBF /* Localizable.strings */; };
 		929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133331CCBF4AE00B2351E /* AppDelegate.swift */; };
 		929133391CCBF4AE00B2351E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929133371CCBF4AE00B2351E /* Main.storyboard */; };
 		9291333B1CCBF4AE00B2351E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9291333A1CCBF4AE00B2351E /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		9209B74E1CCDC61A005F8312 /* RBDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDetailTableViewCell.swift; sourceTree = "<group>"; };
 		924F50B91CCE0FFC00398CBF /* RBDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBDataCenter.swift; sourceTree = "<group>"; };
 		924F50BF1CCE283000398CBF /* RxRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRealm.swift; sourceTree = "<group>"; };
+		924F50C31CCE493600398CBF /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		929133301CCBF4AE00B2351E /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929133331CCBF4AE00B2351E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929133381CCBF4AE00B2351E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				929133731CCD3F3E00B2351E /* Model */,
 				929133641CCC0AC200B2351E /* Service */,
 				929133331CCBF4AE00B2351E /* AppDelegate.swift */,
+				924F50C31CCE493600398CBF /* Localizable.strings */,
 				929133371CCBF4AE00B2351E /* Main.storyboard */,
 				9291333A1CCBF4AE00B2351E /* Assets.xcassets */,
 				9291333C1CCBF4AE00B2351E /* LaunchScreen.storyboard */,
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9291333E1CCBF4AE00B2351E /* LaunchScreen.storyboard in Resources */,
+				924F50C41CCE493600398CBF /* Localizable.strings in Resources */,
 				9291333B1CCBF4AE00B2351E /* Assets.xcassets in Resources */,
 				929133391CCBF4AE00B2351E /* Main.storyboard in Resources */,
 			);
