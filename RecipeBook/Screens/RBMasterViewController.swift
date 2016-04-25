@@ -7,34 +7,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class RBMasterViewController: UIViewController {
+
+class RBMasterViewController: RBBaseViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
+    var viewModel: RBMasterViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupViewModel()
+        self.setupTableView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        if segue.identifier == "showDetail" {
@@ -46,5 +34,50 @@ class RBMasterViewController: UIViewController {
 //                controller.navigationItem.leftItemsSupplementBackButton = true
 //            }
 //        }
+    }
+}
+
+extension RBMasterViewController {
+    
+    func setupViewModel() {
+        viewModel = RBMasterViewModel()
+        viewModel.activate()
+        //show alert on error with a retry
+        viewModel
+            .rx_onError
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribeOn(MainScheduler.instance)
+            .subscribeNext { [unowned self] (error) -> Void in
+                let alert = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+                let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+                    self.setupViewModel()
+                    alert.dismissViewControllerAnimated(true, completion: nil)
+                })
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            .addDisposableTo(disposeBag)
+        //connect datasource adapter and updates
+        self.tableView.dataSource = viewModel.adapter
+        viewModel
+            .rx_dataSourceUpdate
+            .subscribeOn(MainScheduler.instance)
+            .subscribe { [unowned self] event in
+                if let _ = event.element {
+                    self.tableView.reloadData()
+                }
+            }
+            .addDisposableTo(disposeBag)
+    }
+    
+    func setupTableView()  {
+        tableView
+            .rx_itemSelected
+            .subscribeOn(MainScheduler.instance)
+            .subscribeNext { (indexPath) in
+                //itemSelected Stuff
+            }
+            .addDisposableTo(disposeBag)
     }
 }

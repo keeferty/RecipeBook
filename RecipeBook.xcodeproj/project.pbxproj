@@ -11,6 +11,9 @@
 		246F1F1EEF3EA644817C8C49 /* Pods_RecipeBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852F54E14E398C280D15284A /* Pods_RecipeBookTests.framework */; };
 		319EFAB50676D44A8F6E544C /* Pods_RecipeBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCB358A6D099A4B2D401475 /* Pods_RecipeBookUITests.framework */; };
 		9209B7381CCD714C005F8312 /* RBMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7371CCD714C005F8312 /* RBMasterTableViewCell.swift */; };
+		9209B73E1CCD7BB8005F8312 /* RBTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B73D1CCD7BB8005F8312 /* RBTableViewAdapter.swift */; };
+		9209B7411CCD7C18005F8312 /* RBConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */; };
+		9209B7431CCD9162005F8312 /* RBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B7421CCD9162005F8312 /* RBBaseViewController.swift */; };
 		929133341CCBF4AE00B2351E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929133331CCBF4AE00B2351E /* AppDelegate.swift */; };
 		929133391CCBF4AE00B2351E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929133371CCBF4AE00B2351E /* Main.storyboard */; };
 		9291333B1CCBF4AE00B2351E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9291333A1CCBF4AE00B2351E /* Assets.xcassets */; };
@@ -61,6 +64,9 @@
 		852F54E14E398C280D15284A /* Pods_RecipeBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86463F75ABCE29B0CD56DFE8 /* Pods-RecipeBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeBookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeBookUITests/Pods-RecipeBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9209B7371CCD714C005F8312 /* RBMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBMasterTableViewCell.swift; sourceTree = "<group>"; };
+		9209B73D1CCD7BB8005F8312 /* RBTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBTableViewAdapter.swift; sourceTree = "<group>"; };
+		9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBConfigurableCellProtocol.swift; sourceTree = "<group>"; };
+		9209B7421CCD9162005F8312 /* RBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBaseViewController.swift; sourceTree = "<group>"; };
 		929133301CCBF4AE00B2351E /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929133331CCBF4AE00B2351E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929133381CCBF4AE00B2351E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +149,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9209B73B1CCD7B87005F8312 /* ReusableElements */ = {
+			isa = PBXGroup;
+			children = (
+				9209B73F1CCD7BF8005F8312 /* Protocols */,
+				9209B73C1CCD7B8B005F8312 /* Classes */,
+			);
+			path = ReusableElements;
+			sourceTree = "<group>";
+		};
+		9209B73C1CCD7B8B005F8312 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9209B73D1CCD7BB8005F8312 /* RBTableViewAdapter.swift */,
+				9209B7421CCD9162005F8312 /* RBBaseViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9209B73F1CCD7BF8005F8312 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9209B7401CCD7C18005F8312 /* RBConfigurableCellProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		929133271CCBF4AE00B2351E = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +200,7 @@
 		929133321CCBF4AE00B2351E /* RecipeBook */ = {
 			isa = PBXGroup;
 			children = (
+				9209B73B1CCD7B87005F8312 /* ReusableElements */,
 				929133AB1CCD59CB00B2351E /* Screens */,
 				929133731CCD3F3E00B2351E /* Model */,
 				929133641CCC0AC200B2351E /* Service */,
@@ -513,7 +546,10 @@
 				9291336B1CCC9EE500B2351E /* RBAPICall.swift in Sources */,
 				92D756911CCD5D8100CB8E2F /* RBDetailViewModel.swift in Sources */,
 				92D756941CCD6C8900CB8E2F /* RBMasterViewModel.swift in Sources */,
+				9209B7431CCD9162005F8312 /* RBBaseViewController.swift in Sources */,
+				9209B73E1CCD7BB8005F8312 /* RBTableViewAdapter.swift in Sources */,
 				9209B7381CCD714C005F8312 /* RBMasterTableViewCell.swift in Sources */,
+				9209B7411CCD7C18005F8312 /* RBConfigurableCellProtocol.swift in Sources */,
 				929133AF1CCD5A0F00B2351E /* RBDetailViewController.swift in Sources */,
 				929133751CCD3F5700B2351E /* RBRecipe.swift in Sources */,
 				929133791CCD4A6700B2351E /* RBIngredient.swift in Sources */,

@@ -13,6 +13,7 @@ def app_pods
     pod 'Alamofire', '3.3.1'
     pod 'AlamofireObjectMapper', '3.0'
     pod 'ObjectMapper', '1.2'
+    pod 'AlamofireImage', '2.4'
 end
 
 target 'RecipeBook' do

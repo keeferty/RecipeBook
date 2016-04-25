@@ -43,7 +43,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dCF-TO-HEu" customClass="RBMasterTableViewCell" customModule="RecipeBook" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RBMasterTableViewCell" id="dCF-TO-HEu" customClass="RBMasterTableViewCell" customModule="RecipeBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dCF-TO-HEu" id="Gu3-Qh-eJP">
@@ -88,7 +88,6 @@
                                             <outlet property="recipeDescription" destination="dtq-UN-UAk" id="JkA-SW-4sx"/>
                                             <outlet property="recipeImage" destination="G1a-Zk-S8h" id="pXv-Sg-9En"/>
                                             <outlet property="recipeName" destination="9KY-yH-glo" id="jOJ-mj-hOE"/>
-                                            <segue destination="9bB-wg-hdI" kind="showDetail" identifier="showDetail" trigger="accessoryAction" id="GKL-35-3lL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,7 +103,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="LBf-1w-LFf"/>
                     <connections>
-                        <outlet property="tableView" destination="LpB-G3-OA6" id="zj9-XU-o8U"/>
+                        <outlet property="tableView" destination="LpB-G3-OA6" id="ft3-f2-2W6"/>
+                        <segue destination="9bB-wg-hdI" kind="showDetail" identifier="showDetail" id="Scg-9z-dkx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyv-xN-0Vd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,6 +152,7 @@
                 <splitViewController id="wbZ-fm-43E" sceneMemberID="viewController">
                     <connections>
                         <segue destination="g4H-ON-jhl" kind="relationship" relationship="masterViewController" id="SGF-Du-rP5"/>
+                        <segue destination="9bB-wg-hdI" kind="relationship" relationship="detailViewController" id="qRX-FA-01R"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUU-0Y-0yJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,4 +163,7 @@
     <resources>
         <image name="placeholder" width="311" height="207"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qRX-FA-01R"/>
+    </inferredMetricsTieBreakers>
 </document>

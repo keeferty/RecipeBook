@@ -10,6 +10,7 @@ import UIKit
 
 class RBDetailViewController: UIViewController {
     
+    var viewModel : RBDetailViewModel? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         
